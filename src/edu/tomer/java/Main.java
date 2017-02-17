@@ -6,6 +6,10 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+
+        StudentPhoneBook book = new StudentPhoneBook();
+
+
         // instantiate a student:
         Student moshe = new Student(
                 "Moshe", "Doe", "03030405055",

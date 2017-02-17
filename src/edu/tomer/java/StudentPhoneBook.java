@@ -11,22 +11,28 @@ public class StudentPhoneBook {
     ArrayList<Student> studentList = new ArrayList<>();
 
     void addStudent(Student s){
-
+        studentList.add(s);
     }
 
     void addStudent(){
         Student s = new Student();//IO!!!
+        studentList.add(s);
     }
 
     void removeStudent(int index){
-
+        //TODO: Test for bounds:
+        studentList.remove(index);
     }
 
     void showStudent(int index){
-
+        //TODO: Test for bounds:
+        Student s = studentList.get(index);
+        s.print();
     }
 
     void showAllStudents(){
-
+        for (Student s : studentList) {
+            s.print();
+        }
     }
 }
