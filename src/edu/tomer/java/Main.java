@@ -7,7 +7,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //Write your code here:
-        
+        // instantiate a student:
+        Student moshe = new Student(
+                "Moshe", "Doe", "03030405055",
+                "Moshe@gmail.com", "050-7123012", "Mesharerim 4"
+        );
+
+
+
+
+        moshe.print();
+
+
+
     }
 }
