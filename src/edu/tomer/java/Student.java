@@ -1,5 +1,7 @@
 package edu.tomer.java;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 /**
@@ -10,7 +12,7 @@ public class Student {
     String firstName;
     String lastName;
     String socialID;
-    Date enrollmentDate; //Shift + F6 (Rename
+    LocalDateTime enrollmentDate; //Shift + F6 (Rename
     String email;
     String phone;
     String address;
@@ -25,7 +27,7 @@ public class Student {
         this.email = email;
         this.phone = phone;
         this.address = address;
-        this.enrollmentDate = new Date();
+        this.enrollmentDate = LocalDateTime.now();
     }
 
     //default constructor:
@@ -39,10 +41,11 @@ public class Student {
         this.email =  IO.getString("Enter Email: ");
         this.phone = IO.getString("Enter Phone: ");
         this.address = IO.getString("Enter Home Address: ");
-        this.enrollmentDate = new Date();
+        this.enrollmentDate = LocalDateTime.now();
     }
 
     //Actions / Methods:
+    //instance method:
     public void print(){
         System.out.println(toString());
     }
@@ -58,4 +61,21 @@ public class Student {
                        "Phone: " + phone;
    }
 
+   //instance method
+    //first create an instance:, on the instance we call this method:"
+    //Student s = new Student;
+    //s.sayYourName();
+   public void sayYourName(){
+       System.out.println("Name: " + firstName + " - " + lastName);
+   }
+
+   public void howManySeconds(){
+       LocalDateTime now = LocalDateTime.now();
+
+       now.until(enrollmentDate, ChronoUnit.SECONDS);
+
+       LocalDateTime birthDate = LocalDateTime.of(1980, 1, 1, 12, 0);
+
+
+   }
 }

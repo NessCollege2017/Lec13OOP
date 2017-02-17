@@ -1,5 +1,6 @@
 package edu.tomer.java;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class IO {
@@ -66,7 +67,7 @@ public class IO {
         }
     }
 
-    static int getInt(String prompt){
+    public static int getInt(String prompt){
         System.out.println(prompt);
         int n = scan.nextInt(); //alt + Enter here...
         return n;
@@ -124,6 +125,14 @@ public class IO {
             result = getInt(prompt);
         }while (result < from || result > to);
         return result;
+    }
+
+    //input a date:
+    public static LocalDateTime getDate(String prompt){
+        int year = IO.getInt("Enter the year", 1900, 2200);
+        int month = IO.getInt("Enter the month", 1, 12);
+        int day = IO.getInt("Enter the day", 1, 31);
+        return LocalDateTime.of(year, month, day, 0, 0);
     }
 
     static int getInt(String prompt, int from){
