@@ -13,10 +13,12 @@ public class Main {
                 "Moshe@gmail.com", "050-7123012", "Mesharerim 4"
         );
 
-
-
-
         moshe.print();
+
+        Student s = new Student();
+        s.print();
+
+       // moshe.print();
 
 
 

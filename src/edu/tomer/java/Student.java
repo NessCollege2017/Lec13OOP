@@ -28,6 +28,20 @@ public class Student {
         this.enrollmentDate = new Date();
     }
 
+    //default constructor:
+    //if no other constructor exists, the compiler generates
+    //a default constructor like this one - for free:
+    public Student(){
+        System.out.println("Let's create a new Student: ");
+        this.firstName = IO.getString("Enter Name: ");
+        this.lastName = IO.getString("Enter Last Name: ");
+        this.socialID = IO.getString("Enter Social ID: ");
+        this.email =  IO.getString("Enter Email: ");
+        this.phone = IO.getString("Enter Phone: ");
+        this.address = IO.getString("Enter Home Address: ");
+        this.enrollmentDate = new Date();
+    }
+
     //Actions / Methods:
     public void print(){
         System.out.println(toString());
@@ -38,7 +52,7 @@ public class Student {
                        "First Name: " + firstName + "\n" +
                        "Last Name: " + lastName + "\n" +
                        "Social ID: " + socialID + "\n" +
-                       "Birth Date: " + enrollmentDate + "\n" +
+                       "Enrollment Date: " + enrollmentDate + "\n" +
                        "Email address: " + email + "\n" +
                        "Home Address: " + address + "\n" +
                        "Phone: " + phone;

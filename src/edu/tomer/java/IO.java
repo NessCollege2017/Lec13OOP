@@ -72,10 +72,10 @@ public class IO {
         return n;
     }
 
-    static String getString(String prompt){
-        if (!prompt.endsWith(":"))
-            prompt+=":";
-        System.out.println(prompt);
+    static String getString(String message){
+        if (!message.endsWith(":") && !message.endsWith(": "))
+            message+=": ";
+        System.out.println(message);
         return scan.next();
     }
 
